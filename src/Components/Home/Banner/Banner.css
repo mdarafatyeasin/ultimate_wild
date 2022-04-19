@@ -10,7 +10,7 @@
 }
 .banner-title{
     font-size: 6vw;
-    color: white;
+    color: rgb(253, 255, 153);
     font-weight: 700;
 }
 .banner-content{
@@ -19,4 +19,22 @@
 }
 .banner-info{
     width: 50%;
+}
+.common-button{
+    padding: 10px 45px;
+    margin-left: 20px;
+    margin-top: 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+.common-button:hover{
+    background-color: rgb(13, 19, 44);
+    color: wheat;
+}
+.banner-text{
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
 }
