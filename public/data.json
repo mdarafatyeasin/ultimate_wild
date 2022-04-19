@@ -1,21 +1,21 @@
 [
     {
       "id": 0,
-      "picture": "https://i.ibb.co/xJ53DCD/animal.png",
+      "picture": "https://i.ibb.co/86ZjgqJ/animal.png",
       "name": "Animal",
       "description": "The term wildlife is a collective term for the wild and native plants and animals of a region.",
       "price": 800
     },
     {
       "id": 1,
-      "picture": "https://i.ibb.co/pZGttzq/Aquatic-animals.png",
+      "picture": "https://i.ibb.co/Kj0ts4H/Aquatic-animals.png",
       "name": "Aquatic animals",
       "description": "Let us take a close look at these wonderful masterpieces of photography.",
       "price": 700
     },
     {
       "id": 2,
-      "picture": "https://i.ibb.co/njn1tGC/nature.png",
+      "picture": "https://i.ibb.co/86ZjgqJ/animal.png",
       "name": "Nature",
       "description": "When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.",
       "price": 400
