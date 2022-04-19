@@ -19,6 +19,13 @@ const Login = () => {
 
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
+    let errorElement;
+    if (error) {
+        errorElement = <div>
+            <p>Error: {error.message}</p>
+        </div>
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -47,11 +54,13 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                {errorElement}
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
             <p>New to Ultmate Wild? <Link className='togol-link' to="/signup">Please Sign-up</Link> </p>
+            
             <SocialLogin></SocialLogin>
         </div>
     );
