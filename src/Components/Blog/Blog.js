@@ -3,7 +3,7 @@ import "./Blog.css"
 
 const Blog = () => {
     return (
-        <div>
+        <div className='blog-section'>
             <div className="first-question">
                 <h2>
                     1.What is the Difference between authorization and authentication?
