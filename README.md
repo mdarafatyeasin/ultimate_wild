@@ -1,4 +1,19 @@
-# live side lnk 
+# live side lnk []
+
+## frameworks, libraries
+* react firebase hooks
+* react rowter
+* react bootstrap
+* tost
+* firebase
+
+## Features 
+* Services
+* Blog
+* Order
+* Log In
+* Sign Up
+* About
 
 
 # Getting Started with Create React App
