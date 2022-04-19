@@ -15,3 +15,14 @@
 .card-details{
     padding: 15px;
 }
+.booking-button{
+    background-color: rgb(253, 255, 153);;
+    padding: 10px 45px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.booking-button:hover{
+    background-color: rgb(13, 19, 44);
+    color: wheat;
+}
