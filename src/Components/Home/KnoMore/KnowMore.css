@@ -1,0 +1,25 @@
+.know-more-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 80px auto;
+
+}
+
+.km-img{
+    width: 80%;
+}
+.km-img img{
+    width: 100%;
+}
+.text{
+    width: 80%;
+    padding-left: 50px;
+}
+
+@media only screen and (max-width: 600px){
+    .know-more-container{
+        display: block;
+    }
+}

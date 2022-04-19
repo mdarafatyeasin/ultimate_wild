@@ -1,0 +1,13 @@
+.order-component{
+    width: 80%;
+    margin: auto;
+}
+.order-placed{
+    display: flex;
+    justify-content: center;
+}
+.order-text{
+    text-align: center;
+    margin-top: 50px;
+    color: green;
+}

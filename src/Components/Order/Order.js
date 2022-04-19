@@ -1,9 +1,18 @@
 import React from 'react';
+import order from "../../Img/Order/order.png"
+import "./Order.css"
 
 const Order = () => {
     return (
-        <div>
-            <h1>this is order</h1>
+        <div className="order-component">
+            <div className='order-placed'>
+                <img src={order} alt="" />
+            </div>
+            <div className='order-text'>
+                <h1>
+                    <strong >Order placed!!</strong>
+                </h1>
+            </div>
         </div>
     );
 };

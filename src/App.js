@@ -10,6 +10,7 @@ import Signup from './Components/Login/Signup/Signup';
 import RequairAuth from './Components/Login/RequairAuth/RuquairAuth';
 import Order from './Components/Order/Order';
 import Footer from './Components/Home/Footer/Footer';
+import NotFound from './Components/NotFound/NotFound';
 
 
 
@@ -30,8 +31,8 @@ function App() {
             <Order></Order>
           </RequairAuth>
         }>
-
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
