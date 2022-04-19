@@ -7,7 +7,7 @@ const Banner = () => {
             <div className='banner-content'>
                 <div className="banner-info">
                     <h1 className='banner-title'> Welcome to <br /> Ultimate Wild</h1>
-                    <p className='banner-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A natus rem harum quae odit repellendus similique quas soluta nesciunt consequatur!</p>
+                    <p className='banner-text'>How glorious a greeting the sun gives the mountains!” “Keep your love of nature, for that is the true way to understand art more and more.</p>
                 </div>
                 <button className='common-button'>Higher me</button>
             </div>
