@@ -7,6 +7,8 @@ import Home from './Components/Home/Home/Home';
 import Services from './Components/Home/Services/Services/Services';
 import Login from './Components/Login/Login/Login';
 import Signup from './Components/Login/Signup/Signup';
+import RequairAuth from './Components/Login/RequairAuth/RuquairAuth';
+import Order from './Components/Order/Order';
 
 
 
@@ -22,6 +24,13 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path= '/order' element={
+          <RequairAuth>
+            <Order></Order>
+          </RequairAuth>
+        }>
+
+        </Route>
       </Routes>
     </div>
   );

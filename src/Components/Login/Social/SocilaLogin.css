@@ -1,0 +1,18 @@
+.divider{
+    height: 1px;
+    width: 45%;
+    background-color: black;
+}
+.divider-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-signin-button{
+    background-color: green;
+    width: 50%;
+    margin: auto;
+}
+.social-container{
+    display: flex;
+}

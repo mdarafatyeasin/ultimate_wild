@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../Social/SocialLogin';
 import "./Login.css"
 
 const Login = () => {
@@ -16,6 +17,9 @@ const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
 
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const email = emailRef.current.value
@@ -24,7 +28,7 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
     if(user){
-        navigate('/home')
+        navigate(from, { replace: true });
     }
 
     return (
@@ -34,9 +38,6 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -51,6 +52,7 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New to Ultmate Wild? <Link className='togol-link' to="/signup">Please Sign-up</Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
