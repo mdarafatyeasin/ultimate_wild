@@ -1,0 +1,17 @@
+.service-card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+.card-details{
+    padding: 15px;
+}
