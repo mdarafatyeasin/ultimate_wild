@@ -9,6 +9,7 @@ import Login from './Components/Login/Login/Login';
 import Signup from './Components/Login/Signup/Signup';
 import RequairAuth from './Components/Login/RequairAuth/RuquairAuth';
 import Order from './Components/Order/Order';
+import Footer from './Components/Home/Footer/Footer';
 
 
 
@@ -32,6 +33,7 @@ function App() {
 
         </Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

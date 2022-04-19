@@ -11,6 +11,7 @@ const Home = () => {
 
             </div>
             <div className="service-section">
+                <h1 className='Services-title'>SERVICES</h1>
                 <Services></Services>
             </div>
         </div>

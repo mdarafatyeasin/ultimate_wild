@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Button, Form, Toast } from 'react-bootstrap';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../Social/SocialLogin';
 import "./Login.css"
 
 const Login = () => {
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -37,6 +38,7 @@ const Login = () => {
     if(user){
         navigate(from, { replace: true });
     }
+    
 
     return (
         <div className='login-container'>
@@ -52,7 +54,7 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <button>resat</button>
                 </Form.Group>
                 {errorElement}
                 <Button variant="primary" type="submit">
