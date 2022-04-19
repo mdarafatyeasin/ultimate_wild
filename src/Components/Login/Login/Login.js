@@ -1,9 +1,12 @@
 import React, { useRef } from 'react';
 import { Button, Form, Toast } from 'react-bootstrap';
-import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../Social/SocialLogin';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css"
 
 const Login = () => {
@@ -13,8 +16,8 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
-      const navigate = useNavigate()
+    ] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate()
     const emailRef = useRef('')
     const passwordRef = useRef('')
 
@@ -35,10 +38,17 @@ const Login = () => {
 
         signInWithEmailAndPassword(email, password)
     }
-    if(user){
+    if (user) {
         navigate(from, { replace: true });
     }
-    
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
+    const handleResetButton = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        toast('Sent email');
+    }
 
     return (
         <div className='login-container'>
@@ -54,17 +64,22 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <button>resat</button>
+                    <button className='resat-button'  onClick={handleResetButton}>&#x21bb; Reset Password</button>
+                    <ToastContainer />
                 </Form.Group>
                 {errorElement}
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
+                <div className='logIn-container'>
+                    <Button className='logIn-button' variant="primary" type="submit">
+                        Log In
+                    </Button>
+                </div>
             </Form>
             <p>New to Ultmate Wild? <Link className='togol-link' to="/signup">Please Sign-up</Link> </p>
-            
+
             <SocialLogin></SocialLogin>
+            
         </div>
+        
     );
 };
 
